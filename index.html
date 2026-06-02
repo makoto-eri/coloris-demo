@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coloris ｜ デザイン方向性 6案 切替デモ</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{font-family:'Hiragino Kaku Gothic ProN','Yu Gothic',system-ui,sans-serif;background:#1b1916;color:#eee;display:flex;flex-direction:column;height:100vh}
+.bar{flex:0 0 auto;background:#1b1916;padding:11px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;border-bottom:1px solid #34302b}
+.bar .title{font-size:13px;letter-spacing:.12em;color:#cdb683;font-weight:700;margin-right:6px}
+.tab{font-family:inherit;font-size:12.5px;padding:8px 15px;border:1px solid #46413a;background:transparent;color:#cfc8bd;border-radius:30px;cursor:pointer;transition:.2s;white-space:nowrap}
+.tab:hover{border-color:#cdb683;color:#fff}
+.tab.active{background:#cdb683;color:#1b1916;border-color:#cdb683;font-weight:700}
+.hint{font-size:11px;color:#8a857d;margin-left:auto}
+.stage{flex:1 1 auto;min-height:0}
+iframe{display:block;width:100%;height:100%;border:0;background:#fff}
+@media(max-width:680px){.hint{display:none}}
+</style>
+</head>
+<body>
+<div class="bar">
+  <span class="title">Coloris ｜ デザイン方向性</span>
+  <button class="tab active" data-t="1">① エレガント</button>
+  <button class="tab" data-t="2">② ナチュラル</button>
+  <button class="tab" data-t="3">③ モダン</button>
+  <button class="tab" data-t="4">④ 韓国トレンド</button>
+  <button class="tab" data-t="5">⑤ かわいいポップ</button>
+  <button class="tab" data-t="6">⑥ ラグジュアリー</button>
+  <span class="hint">タブをクリックで切替（デモ・写真と文章はダミー）</span>
+</div>
+<div class="stage"><iframe id="view" title="preview"></iframe></div>
+<script type="text/html" id="t1"><!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>①エレガント系 ｜ Coloris デモ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--white:#FFFFFF;--paper:#FBF8F4;--paper2:#F4EDE3;--beige:#EDE2D2;--ink:#322E29;--soft:#7A7167;--gold:#B2924F;--gold-d:#967936;--gold-s:#CDB683;--line:#E6DCCE;--rose:#BC8A7C;--shadow:0 30px 70px -34px rgba(74,54,30,.34)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--paper);line-height:1.95;font-weight:300;letter-spacing:.04em;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.eyebrow{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.1rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-d);display:inline-flex;align-items:center;gap:.9em;margin-bottom:1.3rem}
+.eyebrow::before{content:"";width:42px;height:1px;background:var(--gold)}
+.eyebrow.c{justify-content:center}.eyebrow.c::after{content:"";width:42px;height:1px;background:var(--gold)}
+.demobar{background:var(--ink);color:#E9DECB;text-align:center;font-size:.72rem;letter-spacing:.16em;padding:9px}
+.demobar b{color:var(--gold-s)}
+header{position:sticky;top:0;z-index:50;background:rgba(251,248,244,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:80px}
+.brand{display:flex;flex-direction:column;line-height:1}
+.brand .name{font-family:"Cormorant Garamond",serif;font-size:1.85rem;letter-spacing:.28em;font-weight:600}
+.brand .sub{font-size:.55rem;letter-spacing:.42em;color:var(--gold-d);margin-top:5px;padding-left:.3em}
+.navlinks{display:flex;gap:32px;list-style:none;align-items:center}
+.navlinks a{font-size:.83rem;letter-spacing:.13em;color:var(--ink)}
+.navlinks a:hover{color:var(--gold-d)}
+.btn{display:inline-flex;align-items:center;gap:.5em;padding:.9em 1.9em;font-size:.8rem;letter-spacing:.15em;border:1px solid var(--ink);background:var(--ink);color:var(--paper);transition:.4s;cursor:pointer}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#fff}.btn.gold:hover{background:transparent;color:var(--gold-d)}
+.btn.light{background:transparent;border-color:rgba(255,255,255,.6);color:#fff}.btn.light:hover{background:#fff;color:var(--ink)}
+@media(max-width:680px){.navlinks{display:none}}
+
+.hero{position:relative;min-height:82vh;display:flex;align-items:center;overflow:hidden}
+.hero .bg{position:absolute;inset:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(40,34,28,.62),rgba(40,34,28,.32) 48%,rgba(40,34,28,.05))}
+.hero .wrap{position:relative;z-index:2;color:#fff}
+.hero .eyebrow{color:var(--gold-s)}.hero .eyebrow::before{background:var(--gold-s)}
+.hero h1{font-family:"Shippori Mincho",serif;font-weight:600;font-size:clamp(2.1rem,4.4vw,3.5rem);line-height:1.55;letter-spacing:.08em;margin-bottom:1.5rem;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.hero p{max-width:30em;font-size:1rem;line-height:2.2;color:rgba(255,255,255,.92);margin-bottom:2.4rem}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+
+.sec{padding:104px 0}
+.sec-head{text-align:center;max-width:44em;margin:0 auto 56px}
+.sec-head h2{font-family:"Shippori Mincho",serif;font-weight:600;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.5;letter-spacing:.04em}
+.sec-head p{margin-top:1rem;color:var(--soft);font-size:.94rem}
+
+.split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.split .im{position:relative;min-height:460px;overflow:hidden}
+.split .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.split .tx{padding:72px clamp(28px,6vw,84px);display:flex;flex-direction:column;justify-content:center;background:var(--white)}
+.split .tx h2{font-family:"Shippori Mincho",serif;font-weight:600;font-size:clamp(1.6rem,2.6vw,2.1rem);line-height:1.6;margin-bottom:1.3rem}
+.split .tx p{color:var(--soft);font-size:.94rem;margin-bottom:1rem;line-height:2.1}
+
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.card{background:var(--white);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;transition:.5s}
+.card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.card .ph{aspect-ratio:4/5;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:1s}
+.card:hover .ph img{transform:scale(1.06)}
+.card .b{padding:24px}
+.card .l{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--gold-d);font-size:1rem}
+.card h3{font-family:"Shippori Mincho",serif;font-size:1.08rem;font-weight:600;margin:.3rem 0 .7rem}
+.card p{font-size:.83rem;color:var(--soft);line-height:1.9}
+.card .pr{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-family:"Shippori Mincho",serif;font-weight:600}
+
+.ba-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.ba{background:var(--white);border:1px solid var(--line);overflow:hidden}
+.ba .pair{display:grid;grid-template-columns:1fr 1fr}
+.ba .pair figure{position:relative;aspect-ratio:3/4;overflow:hidden;margin:0}
+.ba .pair img{width:100%;height:100%;object-fit:cover}
+.ba .pair figure.bef img{filter:grayscale(.82) brightness(.99) contrast(.96)}
+.ba .pair figcaption{position:absolute;top:12px;left:12px;background:rgba(50,46,41,.78);color:#fff;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.76rem;letter-spacing:.1em;padding:3px 12px}
+.ba .pair figure.aft figcaption{background:var(--gold);left:auto;right:12px}
+.ba .cap{padding:18px 20px;font-size:.84rem;color:var(--soft)}
+.ba .cap .who{color:var(--gold-d);font-family:"Cormorant Garamond",serif;font-style:italic;margin-bottom:.3rem}
+
+.ctaband{position:relative;overflow:hidden;text-align:center;padding:116px 0;color:#fff}
+.ctaband img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ctaband::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,34,28,.66),rgba(40,34,28,.7))}
+.ctaband .wrap{position:relative;z-index:2}
+.ctaband .eyebrow{color:var(--gold-s)}.ctaband .eyebrow::before,.ctaband .eyebrow::after{background:var(--gold-s)}
+.ctaband h2{font-family:"Shippori Mincho",serif;font-weight:600;font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.6;letter-spacing:.08em;margin-bottom:1.2rem;text-shadow:0 2px 24px rgba(0,0,0,.3)}
+.ctaband p{max-width:34em;margin:0 auto 2.4rem;color:rgba(255,255,255,.9);font-size:.95rem}
+.ctaband .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer{background:#26221E;color:#A99E92;padding:46px 0;text-align:center;font-size:.82rem}
+footer .name{font-family:"Cormorant Garamond",serif;font-size:1.7rem;letter-spacing:.26em;color:var(--paper);margin-bottom:6px}
+@media(max-width:880px){.split{grid-template-columns:1fr}.split .im{min-height:320px}.cards{grid-template-columns:1fr 1fr}.ba-wrap{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
+@media(max-width:560px){.cards{grid-template-columns:1fr}.sec{padding:70px 0}}
+</style>
+</head>
+<body>
+<div class="demobar">方向性デモ <b>①エレガント系</b> ｜ 白×ゴールド・明朝・上品で王道（写真・文章はダミー）</div>
+<header><div class="wrap nav">
+  <a href="#" class="brand"><span class="name">Coloris</span><span class="sub">PERSONAL COLOR STUDIO</span></a>
+  <nav><ul class="navlinks"><li><a href="#concept">コンセプト</a></li><li><a href="#menu">メニュー</a></li><li><a href="#ba">変身事例</a></li><li><a href="#cta" class="btn gold">ご予約</a></li></ul></nav>
+</div></header>
+
+<section class="hero">
+  <div class="bg"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1700&q=74&auto=format&fit=crop" alt=""></div>
+  <div class="wrap">
+    <div class="eyebrow">Personal Color &amp; Style Studio</div>
+    <h1>“似合う”を知ると、<br>毎日は、もっと自由になる。</h1>
+    <p>表参道のプライベートサロン。パーソナルカラー・骨格・顔タイプ診断で、あなた史上いちばん輝く色と形を見つけます。対面・オンライン対応。</p>
+    <div class="hero-cta"><a href="#cta" class="btn gold">診断を予約する</a><a href="#menu" class="btn light">メニューを見る</a></div>
+  </div>
+</section>
+
+<section class="split" id="concept">
+  <div class="im"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1000&q=72&auto=format&fit=crop" alt=""></div>
+  <div class="tx">
+    <div class="eyebrow">Concept</div>
+    <h2>100人100通りの<br>“似合う”を、丁寧に。</h2>
+    <p>似合う色は、肌・髪・瞳の色によって一人ひとり違います。あなただけのベストカラーとスタイルを、プロの目とていねいなカウンセリングで導きます。</p>
+    <p>「なんとなく」から「自信を持って」へ。</p>
+  </div>
+</section>
+
+<section class="sec" id="menu"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow c">Menu</div><h2>サービスメニュー</h2><p>すべて対面・オンラインからお選びいただけます。</p></div>
+  <div class="cards">
+    <div class="card"><div class="ph"><img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=560&q=72&auto=format&fit=crop"></div><div class="b"><span class="l">01</span><h3>パーソナルカラー診断</h3><p>似合う色のグループを4／16タイプで診断。</p><div class="pr">¥13,000〜</div></div></div>
+    <div class="card"><div class="ph"><img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=560&q=72&auto=format&fit=crop"></div><div class="b"><span class="l">02</span><h3>骨格診断</h3><p>似合う素材・デザイン・着こなしを診断。</p><div class="pr">¥13,000〜</div></div></div>
+    <div class="card"><div class="ph"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=560&q=72&auto=format&fit=crop"></div><div class="b"><span class="l">03</span><h3>顔タイプ診断</h3><p>似合うテイスト・印象を分析します。</p><div class="pr">¥13,000〜</div></div></div>
+    <div class="card"><div class="ph"><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=560&q=72&auto=format&fit=crop"></div><div class="b"><span class="l">04</span><h3>トータル診断・メイク</h3><p>3診断＋似合わせメイクの人気No.1。</p><div class="pr">¥16,000〜</div></div></div>
+  </div>
+</div></section>
+
+<section class="sec" id="ba" style="background:var(--paper2)"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow c">Before &amp; After</div><h2>色を変えると、印象が変わる</h2><p>似合う色をまとうだけで、顔色が明るく華やかに。</p></div>
+  <div class="ba-wrap">
+    <div class="ba"><div class="pair"><figure class="bef"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=440&q=72&auto=format&fit=crop"><figcaption>Before</figcaption></figure><figure class="aft"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=440&q=72&auto=format&fit=crop"><figcaption>After</figcaption></figure></div><div class="cap"><div class="who">M.K. 様 ／ 30代</div>暖色で、ぱっと明るい印象に。</div></div>
+    <div class="ba"><div class="pair"><figure class="bef"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=440&q=72&auto=format&fit=crop"><figcaption>Before</figcaption></figure><figure class="aft"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=440&q=72&auto=format&fit=crop"><figcaption>After</figcaption></figure></div><div class="cap"><div class="who">Y.S. 様 ／ 40代</div>青みカラーで透明感のある肌に。</div></div>
+    <div class="ba"><div class="pair"><figure class="bef"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=440&q=72&auto=format&fit=crop"><figcaption>Before</figcaption></figure><figure class="aft"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=440&q=72&auto=format&fit=crop"><figcaption>After</figcaption></figure></div><div class="cap"><div class="who">A.T. 様 ／ 20代</div>似合うメイクで垢抜けた印象に。</div></div>
+  </div>
+</div></section>
+
+<section class="ctaband" id="cta">
+  <img src="https://images.unsplash.com/photo-1457972729786-0411a3b2b626?w=1700&q=72&auto=format&fit=crop" alt="">
+  <div class="wrap">
+    <div class="eyebrow c">Reservation</div>
+    <h2>あなたに似合う色を、<br>見つけに行きませんか。</h2>
+    <p>ご予約・ご相談は、LINE・予約フォーム・Instagram から承っております。</p>
+    <div class="btns"><a href="#" class="btn gold">ご予約・お問い合わせ</a><a href="#menu" class="btn light">メニューを見る</a></div>
+  </div>
+</section>
+<footer><div class="name">Coloris</div>© 2026 Coloris — Elegant Demo</footer>
+</body>
+</html>
+</script>
+<script type="text/html" id="t2"><!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>②ナチュラル系 ｜ Coloris デモ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Quicksand:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#F6F1E7;--cream:#FBF8F1;--sage:#7E9270;--sage-d:#5E7256;--beige:#E5D7BF;--brown:#4B4339;--brown-s:#857A6B;--line:#E4DAC8;--shadow:0 26px 50px -30px rgba(94,80,54,.4);--r:24px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--brown);background:var(--ivory);line-height:2;font-weight:300;letter-spacing:.03em;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 30px}
+.maru{font-family:"Zen Maru Gothic",sans-serif}
+.qs{font-family:"Quicksand",sans-serif}
+img.warm{filter:saturate(.94) sepia(.05)}
+.eyebrow{font-family:"Quicksand",sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.3em;text-transform:uppercase;color:var(--sage-d);display:inline-flex;align-items:center;gap:.7em;margin-bottom:1.1rem}
+.eyebrow::before{content:"❀";font-size:.9rem}
+.eyebrow.c{justify-content:center}
+.demobar{background:var(--sage-d);color:#F3EEE2;text-align:center;font-size:.74rem;letter-spacing:.14em;padding:9px}
+.demobar b{color:#fff}
+header{position:sticky;top:0;z-index:50;background:rgba(246,241,231,.9);backdrop-filter:blur(12px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:80px}
+.brand{font-family:"Quicksand",sans-serif;font-weight:600;font-size:1.7rem;letter-spacing:.2em;color:var(--brown)}
+.brand small{display:block;font-size:.5rem;letter-spacing:.34em;color:var(--sage-d);font-family:"Noto Sans JP";margin-top:2px}
+.navlinks{display:flex;gap:30px;list-style:none;align-items:center}
+.navlinks a{font-size:.86rem;color:var(--brown);font-family:"Zen Maru Gothic"}
+.navlinks a:hover{color:var(--sage-d)}
+.btn{display:inline-flex;align-items:center;gap:.5em;background:var(--sage);color:#fff;padding:.85em 1.8em;border-radius:40px;font-size:.82rem;font-family:"Zen Maru Gothic";transition:.3s;border:1.5px solid var(--sage)}
+.btn:hover{background:var(--sage-d);border-color:var(--sage-d)}
+.btn.o{background:transparent;color:var(--sage-d)}
+.btn.o:hover{background:var(--sage);color:#fff}
+.btn.w{background:#fff;color:var(--sage-d);border-color:#fff}
+@media(max-width:680px){.navlinks{display:none}}
+
+.hero{position:relative;padding:70px 0 84px;overflow:hidden}
+.hero::before{content:"";position:absolute;width:520px;height:520px;background:radial-gradient(circle,rgba(126,146,112,.18),transparent 70%);top:-160px;right:-120px;border-radius:50%}
+.hero::after{content:"";position:absolute;width:420px;height:420px;background:radial-gradient(circle,rgba(229,215,191,.5),transparent 70%);bottom:-160px;left:-120px;border-radius:50%}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.hero h1{font-family:"Zen Maru Gothic";font-weight:700;font-size:clamp(2rem,4vw,3.1rem);line-height:1.7;letter-spacing:.04em;margin-bottom:1.4rem}
+.hero h1 .hl{color:var(--sage-d)}
+.hero p{color:var(--brown-s);font-size:.98rem;line-height:2.2;margin-bottom:2.2rem;max-width:28em}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-img{position:relative}
+.hero-img img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:140px 140px 18px 18px;box-shadow:var(--shadow)}
+.hero-img .leaf{position:absolute;bottom:-18px;left:-18px;background:#fff;border-radius:20px;padding:16px 22px;box-shadow:var(--shadow);font-family:"Zen Maru Gothic";font-size:.82rem;color:var(--sage-d)}
+.hero-img .leaf b{font-size:1.5rem;display:block}
+
+.sec{padding:96px 0}
+.sec-head{text-align:center;max-width:40em;margin:0 auto 56px}
+.sec-head h2{font-family:"Zen Maru Gothic";font-weight:700;font-size:clamp(1.6rem,2.7vw,2.2rem);line-height:1.7;letter-spacing:.04em}
+.sec-head p{margin-top:1rem;color:var(--brown-s);font-size:.92rem}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+.split img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:var(--r);box-shadow:var(--shadow)}
+.split h2{font-family:"Zen Maru Gothic";font-weight:700;font-size:1.7rem;line-height:1.7;margin-bottom:1.2rem}
+.split p{color:var(--brown-s);font-size:.94rem;margin-bottom:1rem}
+
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:var(--cream);border-radius:var(--r);overflow:hidden;box-shadow:0 18px 36px -28px rgba(94,80,54,.4);transition:.4s}
+.card:hover{transform:translateY(-7px)}
+.card .ph{aspect-ratio:1;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:.8s}
+.card:hover .ph img{transform:scale(1.06)}
+.card .b{padding:22px}
+.card h3{font-family:"Zen Maru Gothic";font-size:1.05rem;font-weight:700;margin-bottom:.5rem}
+.card p{font-size:.8rem;color:var(--brown-s);line-height:1.9}
+.card .pr{margin-top:14px;font-family:"Zen Maru Gothic";color:var(--sage-d);font-weight:500}
+
+.palette{background:var(--beige)}
+.palette .chips{display:flex;justify-content:center;gap:0;flex-wrap:wrap;max-width:680px;margin:0 auto;border-radius:60px;overflow:hidden;box-shadow:var(--shadow)}
+.palette .chips i{flex:1;min-width:70px;height:120px}
+
+.cta{text-align:center;background:var(--sage-d);color:#F4EFE3;padding:90px 0;border-radius:var(--r) var(--r) 0 0}
+.cta h2{font-family:"Zen Maru Gothic";font-weight:700;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.7;margin-bottom:1rem}
+.cta p{color:#DDE3D3;margin-bottom:2rem;font-size:.94rem}
+.cta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer{background:#3D372E;color:#B3A998;padding:40px 0;text-align:center;font-size:.8rem}
+footer .qs{font-size:1.5rem;letter-spacing:.2em;color:#F0EADC;margin-bottom:6px}
+@media(max-width:880px){.hero .wrap,.split{grid-template-columns:1fr;gap:34px}.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cards{grid-template-columns:1fr}.sec{padding:64px 0}}
+</style>
+</head>
+<body>
+<div class="demobar">方向性デモ <b>②ナチュラル系</b> ｜ ベージュ×グリーン・丸み書体・温かく余白多め（写真・文章はダミー）</div>
+<header><div class="wrap nav">
+  <a href="#" class="brand">Coloris<small>NATURAL COLOR STUDIO</small></a>
+  <nav><ul class="navlinks"><li><a href="#concept">コンセプト</a></li><li><a href="#menu">メニュー</a></li><li><a href="#palette">カラー</a></li><li><a href="#cta" class="btn">ご予約</a></li></ul></nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow">Natural Color Studio</div>
+    <h1>あなたらしい色で、<br><span class="hl">ゆるやかに</span>整う毎日。</h1>
+    <p>がんばりすぎない、わたしに似合う色。やわらかな自然光のサロンで、肩の力を抜いて、あなたの心地よい色を見つけませんか。</p>
+    <div class="hero-cta"><a href="#cta" class="btn">診断を予約する</a><a href="#menu" class="btn o">メニューを見る</a></div>
+  </div>
+  <div class="hero-img">
+    <img class="warm" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=900&q=72&auto=format&fit=crop" alt="">
+    <div class="leaf"><b>1,200<span style="font-size:.9rem">名+</span></b>診断実績</div>
+  </div>
+</div></section>
+
+<section class="sec" id="concept" style="background:var(--cream)"><div class="wrap split">
+  <img class="warm" src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=900&q=72&auto=format&fit=crop" alt="">
+  <div>
+    <div class="eyebrow">Concept</div>
+    <h2>“似合う”は、<br>無理しないこと。</h2>
+    <p>肌や瞳の色になじむ色を知ると、毎朝の支度がふっと軽くなります。Coloris は、あなたの自然体の魅力をいちばん大切にするサロンです。</p>
+    <p>ナチュラルな色合わせで、心地よく、自分らしく。</p>
+  </div>
+</div></section>
+
+<section class="sec" id="menu"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow c">Menu</div><h2>サービスメニュー</h2><p>気になる診断から、ゆったりお選びください。</p></div>
+  <div class="cards">
+    <div class="card"><div class="ph"><img class="warm" src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=500&q=72&auto=format&fit=crop"></div><div class="b"><h3>パーソナルカラー</h3><p>似合う色のグループを診断します。</p><div class="pr">¥13,000〜</div></div></div>
+    <div class="card"><div class="ph"><img class="warm" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=500&q=72&auto=format&fit=crop"></div><div class="b"><h3>骨格診断</h3><p>似合う素材・形を診断します。</p><div class="pr">¥13,000〜</div></div></div>
+    <div class="card"><div class="ph"><img class="warm" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&q=72&auto=format&fit=crop"></div><div class="b"><h3>顔タイプ診断</h3><p>似合うテイストがわかります。</p><div class="pr">¥13,000〜</div></div></div>
+    <div class="card"><div class="ph"><img class="warm" src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500&q=72&auto=format&fit=crop"></div><div class="b"><h3>メイクレッスン</h3><p>似合わせメイクをレッスン。</p><div class="pr">¥16,000〜</div></div></div>
+  </div>
+</div></section>
+
+<section class="sec palette" id="palette"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow c">Your Color</div><h2>あなたに似合う、<br>やさしい色たち。</h2></div>
+  <div class="chips"><i style="background:#E8C9A0"></i><i style="background:#C9B68C"></i><i style="background:#9CAE84"></i><i style="background:#7E9270"></i><i style="background:#B98E6E"></i><i style="background:#D9A89A"></i></div>
+</div></section>
+
+<section class="cta" id="cta"><div class="wrap">
+  <div class="eyebrow c" style="color:#D9E0CC">Reservation</div>
+  <h2>あなたの色を、<br>見つけに来ませんか。</h2>
+  <p>LINE・予約フォーム・Instagram から、お気軽にどうぞ。</p>
+  <div class="btns"><a href="#" class="btn w">LINEで予約</a><a href="#" class="btn" style="background:transparent;border-color:#fff;color:#fff">予約フォーム</a></div>
+</div></section>
+<footer><div class="qs">Coloris</div>© 2026 Coloris — Natural Color Studio（デモ）</footer>
+</body>
+</html>
+</script>
+<script type="text/html" id="t3"><!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>③モダン／ミニマル系 ｜ Coloris デモ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Noto+Sans+JP:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFFFFF;--ink:#111111;--gray:#8A8A8A;--soft:#F4F4F2;--line:#E5E5E2;--acc:#E2533B}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);line-height:1.9;font-weight:300;letter-spacing:.02em;overflow-x:hidden}
+img{display:block;max-width:100%;filter:grayscale(1) contrast(1.02)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 36px}
+.jost{font-family:"Jost",sans-serif}
+.lbl{font-family:"Jost",sans-serif;font-weight:500;font-size:.72rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gray)}
+.lbl .n{color:var(--acc)}
+.demobar{background:var(--ink);color:#fff;text-align:center;font-size:.7rem;letter-spacing:.22em;padding:9px;font-family:"Jost"}
+.demobar b{color:var(--acc)}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{font-family:"Jost",sans-serif;font-weight:600;font-size:1.5rem;letter-spacing:.36em}
+.navlinks{display:flex;gap:36px;list-style:none;align-items:center}
+.navlinks a{font-family:"Jost";font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+.navlinks a:hover{color:var(--acc)}
+.btn{display:inline-block;font-family:"Jost";font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;padding:.9em 1.9em;border:1px solid var(--ink);background:var(--ink);color:#fff;transition:.3s}
+.btn:hover{background:var(--bg);color:var(--ink)}
+.btn.o{background:transparent;color:var(--ink)}
+.btn.o:hover{background:var(--ink);color:#fff}
+.btn.acc{background:var(--acc);border-color:var(--acc)}
+.btn.acc:hover{background:transparent;color:var(--acc)}
+@media(max-width:680px){.navlinks{display:none}}
+
+.hero{padding:0;border-bottom:1px solid var(--line)}
+.hero .grid{display:grid;grid-template-columns:1.1fr 1fr;min-height:78vh}
+.hero .l{display:flex;flex-direction:column;justify-content:center;padding:60px 60px 60px 0}
+.hero .l .lbl{margin-bottom:30px}
+.hero h1{font-weight:300;font-size:clamp(2.4rem,5vw,4.3rem);line-height:1.18;letter-spacing:-.01em;margin-bottom:1.6rem}
+.hero h1 b{font-weight:500}
+.hero h1 .jp{display:block;font-size:clamp(1rem,1.6vw,1.35rem);letter-spacing:.1em;margin-top:1.4rem;color:var(--gray);font-weight:300}
+.hero .l p{color:var(--gray);max-width:30em;margin-bottom:2.4rem;font-size:.92rem}
+.hero .hbtns{display:flex;gap:0}
+.hero .hbtns .btn:first-child{border-right:0}
+.hero .r{position:relative;overflow:hidden}
+.hero .r img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.hero .r .tag{position:absolute;left:0;bottom:0;background:var(--acc);color:#fff;font-family:"Jost";font-size:.74rem;letter-spacing:.2em;padding:10px 18px;filter:none;text-transform:uppercase}
+
+.sec{padding:120px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid var(--ink);padding-bottom:24px;margin-bottom:60px;flex-wrap:wrap;gap:16px}
+.sec-head h2{font-weight:300;font-size:clamp(1.7rem,3vw,2.6rem);letter-spacing:.01em}
+.sec-head h2 b{font-weight:500}
+
+.menu-list{display:grid;gap:0}
+.mitem{display:grid;grid-template-columns:80px 1.4fr 1fr auto;gap:30px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line);transition:.3s}
+.mitem:hover{padding-left:14px}
+.mitem .no{font-family:"Jost";font-size:1.4rem;color:var(--acc)}
+.mitem h3{font-weight:500;font-size:1.2rem;letter-spacing:.04em}
+.mitem h3 .e{display:block;font-family:"Jost";font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gray);font-weight:400;margin-top:4px}
+.mitem .d{color:var(--gray);font-size:.86rem}
+.mitem .p{font-family:"Jost";font-size:1.3rem;font-weight:400;text-align:right;white-space:nowrap}
+@media(max-width:760px){.mitem{grid-template-columns:50px 1fr;gap:8px 16px}.mitem .d{grid-column:2}.mitem .p{grid-column:2;text-align:left;color:var(--acc)}}
+
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--ink)}
+.feat .im{position:relative;min-height:440px;overflow:hidden}
+.feat .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feat .tx{padding:70px 60px;display:flex;flex-direction:column;justify-content:center}
+.feat .tx .lbl{margin-bottom:24px}
+.feat .tx h2{font-weight:300;font-size:2rem;line-height:1.4;margin-bottom:1.4rem}
+.feat .tx h2 b{font-weight:500}
+.feat .tx p{color:var(--gray);font-size:.92rem}
+@media(max-width:760px){.feat{grid-template-columns:1fr}.feat .im{min-height:300px}}
+
+.cta{background:var(--ink);color:#fff;padding:120px 0;text-align:center}
+.cta .lbl{color:#999;margin-bottom:24px;display:inline-block}
+.cta h2{font-weight:300;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.3;margin-bottom:2.2rem}
+.cta h2 b{font-weight:500}
+.cta .btns{display:flex;gap:0;justify-content:center;flex-wrap:wrap}
+.cta .btns .btn{border-color:#fff;color:#fff;background:transparent}
+.cta .btns .btn:hover{background:#fff;color:var(--ink)}
+.cta .btns .btn.acc{background:var(--acc);border-color:var(--acc)}
+footer{background:var(--ink);color:#777;padding:34px 0;border-top:1px solid #2a2a2a;text-align:center;font-family:"Jost";font-size:.74rem;letter-spacing:.2em}
+</style>
+</head>
+<body>
+<div class="demobar">DESIGN DIRECTION <b>③ MODERN / MINIMAL</b> ｜ 白×黒×差し色1色・細サンセリフ・都会的（写真・文章はダミー）</div>
+<header><div class="wrap nav">
+  <a href="#" class="brand">COLORIS</a>
+  <nav><ul class="navlinks"><li><a href="#menu">Menu</a></li><li><a href="#about">About</a></li><li><a href="#cta" class="btn acc">Booking</a></li></ul></nav>
+</div></header>
+
+<section class="hero"><div class="wrap"><div class="grid">
+  <div class="l">
+    <div class="lbl"><span class="n">⎯⎯</span> Personal Color &amp; Style</div>
+    <h1>Find your<br><b>true colors.</b><span class="jp">似合う色と形を、ロジカルに。</span></h1>
+    <p>パーソナルカラー・骨格・顔タイプ診断。感覚ではなく理論で、あなたに最適な色とスタイルを導き出します。メンズの診断も承ります。</p>
+    <div class="hbtns"><a href="#cta" class="btn">Book a Session</a><a href="#menu" class="btn o">View Menu</a></div>
+  </div>
+  <div class="r"><img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=1000&q=72&auto=format&fit=crop" alt=""><span class="tag">Coloris Studio</span></div>
+</div></div></section>
+
+<section class="sec" id="menu"><div class="wrap">
+  <div class="sec-head"><h2>Service <b>Menu</b></h2><div class="lbl"><span class="n">04</span> Programs</div></div>
+  <div class="menu-list">
+    <div class="mitem"><div class="no">01</div><h3>パーソナルカラー診断<span class="e">Personal Color</span></h3><div class="d">似合う色のグループを4／16タイプで分析。</div><div class="p">¥13,000—</div></div>
+    <div class="mitem"><div class="no">02</div><h3>骨格診断<span class="e">Body Type</span></h3><div class="d">似合う素材・シルエットを診断。</div><div class="p">¥13,000—</div></div>
+    <div class="mitem"><div class="no">03</div><h3>顔タイプ診断<span class="e">Face Type</span></h3><div class="d">似合うテイスト・印象を分析。</div><div class="p">¥13,000—</div></div>
+    <div class="mitem"><div class="no">04</div><h3>トータル診断<span class="e">Total</span></h3><div class="d">3診断をまとめて。最も人気。</div><div class="p">¥35,000—</div></div>
+  </div>
+</div></section>
+
+<section class="sec" id="about" style="padding-top:0"><div class="wrap">
+  <div class="feat">
+    <div class="im"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1000&q=72&auto=format&fit=crop" alt=""></div>
+    <div class="tx">
+      <div class="lbl"><span class="n">⎯⎯</span> Concept</div>
+      <h2>色は、<b>戦略</b>になる。</h2>
+      <p>第一印象は数秒で決まります。あなたに最適な色を知ることは、ビジネスでもプライベートでも確かな武器に。無駄をそぎ落とした診断で、本質だけをお届けします。</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="cta" id="cta"><div class="wrap">
+  <span class="lbl">⎯⎯ Reservation ⎯⎯</span>
+  <h2>Ready to find<br>your <b>colors</b>?</h2>
+  <div class="btns"><a href="#" class="btn acc">LINEで予約</a><a href="#" class="btn">予約フォーム</a></div>
+</div></section>
+<footer>© 2026 COLORIS — MODERN DEMO</footer>
+</body>
+</html>
+</script>
+<script type="text/html" id="t4"><!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>④韓国っぽ／トレンド系 ｜ Coloris デモ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Sans+JP:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EDE7DF;--cream:#F5F1EA;--mauve:#B9A39B;--mauve-d:#9A847C;--taupe:#C8BBAD;--ink:#5B524C;--soft:#867A72;--line:#DDD4C9}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);line-height:2.05;font-weight:300;letter-spacing:.06em;overflow-x:hidden}
+img{display:block;max-width:100%;filter:saturate(.72) brightness(1.02) contrast(.96)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 34px}
+.cm{font-family:"Cormorant Garamond",serif}
+.lbl{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.05rem;letter-spacing:.28em;color:var(--mauve-d)}
+.demobar{background:var(--mauve-d);color:#F3EDE5;text-align:center;font-size:.72rem;letter-spacing:.18em;padding:9px}
+.demobar b{color:#fff;font-weight:400}
+header{position:sticky;top:0;z-index:50;background:rgba(237,231,223,.82);backdrop-filter:blur(12px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:82px}
+.brand{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:1.9rem;letter-spacing:.34em;color:var(--ink)}
+.navlinks{display:flex;gap:34px;list-style:none;align-items:center}
+.navlinks a{font-size:.8rem;letter-spacing:.14em;color:var(--soft)}
+.navlinks a:hover{color:var(--ink)}
+.btn{display:inline-block;font-size:.76rem;letter-spacing:.18em;padding:.95em 2em;border:1px solid var(--mauve-d);color:var(--mauve-d);border-radius:40px;transition:.4s;background:transparent}
+.btn:hover{background:var(--mauve-d);color:#fff}
+.btn.f{background:var(--mauve-d);color:#fff}
+.btn.f:hover{background:transparent;color:var(--mauve-d)}
+@media(max-width:680px){.navlinks{display:none}}
+
+.hero{padding:48px 0 60px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+.hero .lbl{margin-bottom:22px;display:block}
+.hero h1{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(2.6rem,5.6vw,4.6rem);line-height:1.08;letter-spacing:.02em;margin-bottom:1.4rem;color:var(--ink)}
+.hero h1 i{display:block;font-style:italic;color:var(--mauve-d)}
+.hero .jp{font-size:.92rem;color:var(--soft);max-width:24em;margin-bottom:2.2rem;line-height:2.2}
+.hero .imgwrap{position:relative}
+.hero .imgwrap img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:200px 200px 200px 16px}
+.hero .imgwrap .cap{position:absolute;top:18px;left:-14px;background:var(--cream);padding:8px 16px;border-radius:30px;font-family:"Cormorant Garamond";font-style:italic;font-size:.86rem;letter-spacing:.1em;color:var(--mauve-d)}
+
+.sec{padding:80px 0}
+.sec-head{text-align:center;margin:0 auto 50px;max-width:36em}
+.sec-head h2{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(2rem,3.6vw,3rem);letter-spacing:.04em;color:var(--ink)}
+.sec-head .jp{margin-top:.6rem;font-size:.84rem;color:var(--soft);letter-spacing:.1em}
+
+.mood{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.mood figure{margin:0;position:relative;overflow:hidden;border-radius:18px}
+.mood figure img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:.8s}
+.mood figure:hover img{transform:scale(1.06)}
+.mood figure:nth-child(odd){margin-top:28px}
+.mood figcaption{font-family:"Cormorant Garamond";font-style:italic;font-size:.9rem;color:var(--mauve-d);text-align:center;margin-top:10px;letter-spacing:.08em}
+
+.menu-soft{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 50px;max-width:780px;margin:0 auto}
+.ms{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:20px 4px;border-bottom:1px solid var(--line)}
+.ms .nm{font-size:.96rem;color:var(--ink)}
+.ms .nm .e{display:block;font-family:"Cormorant Garamond";font-style:italic;font-size:.8rem;color:var(--soft);letter-spacing:.1em}
+.ms .pr{font-family:"Cormorant Garamond";font-size:1.2rem;color:var(--mauve-d);white-space:nowrap}
+@media(max-width:680px){.menu-soft{grid-template-columns:1fr;gap:0}}
+
+.palette .strip{display:flex;max-width:620px;margin:0 auto;gap:14px;justify-content:center}
+.palette .strip i{width:74px;height:74px;border-radius:50%}
+
+.cta{text-align:center;padding:96px 0}
+.cta h2{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(2.2rem,4vw,3.4rem);font-style:italic;color:var(--ink);margin-bottom:.6rem}
+.cta .jp{color:var(--soft);font-size:.86rem;margin-bottom:2.2rem}
+.cta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer{text-align:center;padding:40px 0;color:var(--soft);font-size:.76rem;letter-spacing:.12em;border-top:1px solid var(--line)}
+footer .cm{font-size:1.5rem;letter-spacing:.3em;color:var(--mauve-d);display:block;margin-bottom:6px}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr;gap:30px}.mood{grid-template-columns:1fr 1fr}.sec{padding:60px 0}}
+</style>
+</head>
+<body>
+<div class="demobar">方向性デモ <b>④韓国っぽ／トレンド系</b> ｜ くすみニュアンスカラー・細フォント・抜け感（写真・文章はダミー）</div>
+<header><div class="wrap nav">
+  <a href="#" class="brand">Coloris</a>
+  <nav><ul class="navlinks"><li><a href="#mood">Gallery</a></li><li><a href="#menu">Menu</a></li><li><a href="#cta" class="btn">Reserve</a></li></ul></nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="lbl">Personal Color</span>
+    <h1>soft,<i>and you.</i></h1>
+    <p class="jp">くすみカラーで叶える、抜け感のある“似合う”。今っぽくて、わたしらしい色を見つけて。</p>
+    <a href="#cta" class="btn f">予約してみる</a>
+  </div>
+  <div class="imgwrap">
+    <img src="https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?w=820&q=72&auto=format&fit=crop" alt="">
+    <span class="cap">your mood color</span>
+  </div>
+</div></section>
+
+<section class="sec" id="mood"><div class="wrap">
+  <div class="sec-head"><h2>Mood Gallery</h2><div class="jp">あなたの“なりたい”を、色で。</div></div>
+  <div class="mood">
+    <figure><img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=460&q=72&auto=format&fit=crop"><figcaption>warm tone</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=460&q=72&auto=format&fit=crop"><figcaption>cool tone</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=460&q=72&auto=format&fit=crop"><figcaption>daily set</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=460&q=72&auto=format&fit=crop"><figcaption>natural</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="sec" id="menu" style="background:var(--cream)"><div class="wrap">
+  <div class="sec-head"><h2>Menu</h2><div class="jp">対面・オンラインどちらも。</div></div>
+  <div class="menu-soft">
+    <div class="ms"><div class="nm">パーソナルカラー診断<span class="e">Personal Color</span></div><div class="pr">¥13,000~</div></div>
+    <div class="ms"><div class="nm">骨格診断<span class="e">Body Type</span></div><div class="pr">¥13,000~</div></div>
+    <div class="ms"><div class="nm">顔タイプ診断<span class="e">Face Type</span></div><div class="pr">¥13,000~</div></div>
+    <div class="ms"><div class="nm">トータル診断<span class="e">Total</span></div><div class="pr">¥35,000~</div></div>
+  </div>
+</div></section>
+
+<section class="sec palette"><div class="wrap">
+  <div class="sec-head"><h2>Your Nuance</h2><div class="jp">くすみトーンで魅せる、あなたの色。</div></div>
+  <div class="strip"><i style="background:#C9B6AE"></i><i style="background:#B6A6A8"></i><i style="background:#A9AE9E"></i><i style="background:#CDB8A0"></i><i style="background:#9FA0A8"></i><i style="background:#D3B9B2"></i></div>
+</div></section>
+
+<section class="cta" id="cta"><div class="wrap">
+  <h2>see you soon.</h2>
+  <div class="jp">LINE・予約フォーム・Instagram から、お気軽に。</div>
+  <div class="btns"><a href="#" class="btn f">LINEで予約</a><a href="#" class="btn">Instagram DM</a></div>
+</div></section>
+<footer><span class="cm">Coloris</span>© 2026 Coloris — Trend Demo</footer>
+</body>
+</html>
+</script>
+<script type="text/html" id="t5"><!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⑤かわいい／ポップ系 ｜ Coloris デモ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Baloo+2:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF7FB;--pink:#FF8FC0;--pink-d:#F26AA6;--mint:#7FE0C2;--lav:#B49BF2;--lemon:#FFD95E;--sky:#86CFF2;--ink:#5A4A55;--soft:#9B8A95;--r:30px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"M PLUS Rounded 1c",sans-serif;color:var(--ink);background:var(--bg);line-height:1.95;font-weight:400;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+.baloo{font-family:"Baloo 2",cursive}
+.demobar{background:var(--pink-d);color:#fff;text-align:center;font-size:.76rem;letter-spacing:.08em;padding:9px;font-weight:500}
+.demobar b{color:var(--lemon)}
+header{position:sticky;top:0;z-index:50;background:rgba(255,247,251,.9);backdrop-filter:blur(10px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{font-family:"Baloo 2";font-weight:700;font-size:1.8rem;color:var(--pink-d);letter-spacing:.02em}
+.brand span{color:var(--lav)}.brand span+span{color:var(--mint)}.brand span+span+span{color:var(--sky)}
+.navlinks{display:flex;gap:26px;list-style:none;align-items:center}
+.navlinks a{font-size:.9rem;font-weight:500;color:var(--ink)}
+.navlinks a:hover{color:var(--pink-d)}
+.btn{display:inline-block;font-family:"Baloo 2";font-weight:600;font-size:.9rem;padding:.7em 1.7em;border-radius:40px;background:var(--pink);color:#fff;transition:.25s;box-shadow:0 8px 0 var(--pink-d)}
+.btn:active{transform:translateY(4px);box-shadow:0 4px 0 var(--pink-d)}
+.btn.mint{background:var(--mint);box-shadow:0 8px 0 #4CC9A0}
+.btn.lav{background:var(--lav);box-shadow:0 8px 0 #8C6FE0}
+.btn.w{background:#fff;color:var(--pink-d);box-shadow:0 8px 0 #FFD2E6}
+@media(max-width:680px){.navlinks{display:none}}
+
+.hero{position:relative;padding:54px 0 80px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(6px);opacity:.5;z-index:0}
+.b1{width:320px;height:320px;background:var(--lemon);top:-80px;left:-80px}
+.b2{width:260px;height:260px;background:var(--mint);bottom:-60px;right:8%}
+.b3{width:200px;height:200px;background:var(--sky);top:40%;right:-60px}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero .tagpop{display:inline-block;background:var(--lav);color:#fff;font-weight:700;font-size:.8rem;padding:.4em 1.2em;border-radius:30px;margin-bottom:18px;transform:rotate(-3deg)}
+.hero h1{font-weight:800;font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.5;margin-bottom:1.2rem}
+.hero h1 .p{color:var(--pink-d)}.hero h1 .m{color:var(--mint)}.hero h1 .l{color:var(--lav)}
+.hero p{color:var(--soft);font-size:.98rem;margin-bottom:2rem;max-width:25em}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+.hero-img{position:relative}
+.hero-img img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50% 50% 46% 54%/54% 46% 54% 46%;border:8px solid #fff;box-shadow:0 24px 50px -24px rgba(242,106,166,.5)}
+.hero-img .star{position:absolute;font-size:2.4rem;animation:spin 6s linear infinite}
+.hero-img .s1{top:-10px;right:30px}.hero-img .s2{bottom:10px;left:-10px;animation-duration:8s}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.sec{padding:84px 0}
+.sec-head{text-align:center;margin:0 auto 50px}
+.sec-head .tagpop{display:inline-block;background:var(--mint);color:#fff;font-weight:700;font-size:.78rem;padding:.4em 1.2em;border-radius:30px;margin-bottom:14px;transform:rotate(2deg)}
+.sec-head h2{font-weight:800;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.5}
+.sec-head p{color:var(--soft);margin-top:.6rem;font-size:.92rem}
+
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 16px 34px -22px rgba(242,106,166,.4);transition:.3s}
+.card:hover{transform:translateY(-8px) rotate(-1deg)}
+.card .ph{aspect-ratio:1;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.card:hover .ph img{transform:scale(1.08)}
+.card .b{padding:20px;text-align:center}
+.card h3{font-weight:700;font-size:1.05rem;margin-bottom:.4rem}
+.card p{font-size:.78rem;color:var(--soft)}
+.card .pr{margin-top:12px;font-family:"Baloo 2";font-weight:700;color:var(--pink-d);font-size:1.1rem}
+.card:nth-child(1) .pr{color:var(--pink-d)}.card:nth-child(2) .pr{color:var(--mint)}.card:nth-child(2) .pr{color:#3DBE96}.card:nth-child(3) .pr{color:var(--lav)}.card:nth-child(4) .pr{color:var(--sky)}
+
+.palette{background:linear-gradient(120deg,#FFE9F3,#EAF7F2)}
+.palette .chips{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.palette .chips i{width:78px;height:78px;border-radius:24px;box-shadow:0 12px 22px -12px rgba(0,0,0,.2);transition:.3s}
+.palette .chips i:hover{transform:translateY(-6px) rotate(6deg)}
+
+.cta{text-align:center;background:var(--pink);color:#fff;padding:88px 0;border-radius:40px 40px 0 0;position:relative;overflow:hidden}
+.cta h2{font-weight:800;font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:1rem}
+.cta p{margin-bottom:2rem;opacity:.95}
+.cta .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+footer{background:#fff;text-align:center;padding:40px 0;color:var(--soft);font-size:.8rem}
+footer .baloo{font-size:1.6rem;color:var(--pink-d);margin-bottom:6px}
+@media(max-width:880px){.hero .wrap{grid-template-columns:1fr;gap:30px}.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cards{grid-template-columns:1fr}.sec{padding:60px 0}}
+</style>
+</head>
+<body>
+<div class="demobar">方向性デモ <b>⑤かわいい／ポップ系</b> ｜ パステル多色・丸ゴシック・明るく元気（写真・文章はダミー）</div>
+<header><div class="wrap nav">
+  <a href="#" class="brand">Col<span>o</span><span>r</span><span>is</span></a>
+  <nav><ul class="navlinks"><li><a href="#menu">メニュー</a></li><li><a href="#palette">カラー</a></li><li><a href="#cta" class="btn">よやく♪</a></li></ul></nav>
+</div></header>
+
+<section class="hero">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  <div class="wrap">
+    <div>
+      <span class="tagpop">似合う色、見つけよ♪</span>
+      <h1>あなたに<span class="p">ぴったり</span>の<br><span class="m">色</span>で、<span class="l">もっと</span>かわいく。</h1>
+      <p>パーソナルカラー診断で、あなたの“好き”と“似合う”をぜんぶ見つけよう！はじめてでも楽しく受けられます◎</p>
+      <div class="hero-cta"><a href="#cta" class="btn">診断を予約する</a><a href="#menu" class="btn mint">メニューを見る</a></div>
+    </div>
+    <div class="hero-img">
+      <span class="star s1">✦</span><span class="star s2">✿</span>
+      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=820&q=75&auto=format&fit=crop" alt="">
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="menu"><div class="wrap">
+  <div class="sec-head"><span class="tagpop">Menu</span><h2>えらべる診断メニュー</h2><p>対面もオンラインもOK！</p></div>
+  <div class="cards">
+    <div class="card"><div class="ph"><img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=500&q=74&auto=format&fit=crop"></div><div class="b"><h3>パーソナルカラー</h3><p>似合う色がわかる♪</p><div class="pr">¥13,000~</div></div></div>
+    <div class="card"><div class="ph"><img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=500&q=74&auto=format&fit=crop"></div><div class="b"><h3>骨格診断</h3><p>似合う形がわかる♪</p><div class="pr">¥13,000~</div></div></div>
+    <div class="card"><div class="ph"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&q=74&auto=format&fit=crop"></div><div class="b"><h3>顔タイプ診断</h3><p>似合う雰囲気が◎</p><div class="pr">¥13,000~</div></div></div>
+    <div class="card"><div class="ph"><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500&q=74&auto=format&fit=crop"></div><div class="b"><h3>メイクレッスン</h3><p>かわいく変身♪</p><div class="pr">¥16,000~</div></div></div>
+  </div>
+</div></section>
+
+<section class="sec palette" id="palette"><div class="wrap">
+  <div class="sec-head"><span class="tagpop" style="background:var(--lav)">Color</span><h2>あなたのハッピーカラー</h2></div>
+  <div class="chips"><i style="background:#FF8FC0"></i><i style="background:#FFD95E"></i><i style="background:#7FE0C2"></i><i style="background:#86CFF2"></i><i style="background:#B49BF2"></i><i style="background:#FFB37A"></i></div>
+</div></section>
+
+<section class="cta" id="cta"><div class="wrap">
+  <h2>いっしょに、かわいく♪</h2>
+  <p>LINE・予約フォーム・Instagram から、気軽にメッセージしてね！</p>
+  <div class="btns"><a href="#" class="btn w">LINEで予約</a><a href="#" class="btn lav">Instagram</a></div>
+</div></section>
+<footer><div class="baloo">Coloris</div>© 2026 Coloris — Pop Demo</footer>
+</body>
+</html>
+</script>
+<script type="text/html" id="t6"><!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⑥ラグジュアリー／ダーク系 ｜ Coloris デモ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#14141C;--panel:#1C1C26;--panel2:#222230;--gold:#C5A253;--gold-s:#E3CB8E;--cream:#ECE5D6;--muted:#9A9384;--line:#33333F}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--cream);background:var(--bg);line-height:2;font-weight:300;letter-spacing:.05em;overflow-x:hidden}
+img{display:block;max-width:100%;filter:brightness(.82) contrast(1.04) saturate(.96)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 36px}
+.cm{font-family:"Cormorant Garamond",serif}
+.mc{font-family:"Shippori Mincho",serif}
+.eyebrow{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.1rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:.8em;margin-bottom:1.4rem}
+.eyebrow::before{content:"";width:46px;height:1px;background:var(--gold)}
+.eyebrow.c{justify-content:center}.eyebrow.c::after{content:"";width:46px;height:1px;background:var(--gold)}
+.demobar{background:#0E0E14;color:var(--muted);text-align:center;font-size:.7rem;letter-spacing:.22em;padding:9px}
+.demobar b{color:var(--gold-s)}
+header{position:sticky;top:0;z-index:50;background:rgba(20,20,28,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:86px}
+.brand{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:2rem;letter-spacing:.3em;color:var(--cream)}
+.navlinks{display:flex;gap:36px;list-style:none;align-items:center}
+.navlinks a{font-size:.82rem;letter-spacing:.14em;color:var(--muted)}
+.navlinks a:hover{color:var(--gold-s)}
+.btn{display:inline-block;font-family:"Cormorant Garamond";font-style:italic;font-size:1rem;letter-spacing:.12em;padding:.7em 1.9em;border:1px solid var(--gold);color:var(--gold-s);transition:.4s;background:transparent}
+.btn:hover{background:var(--gold);color:#14141C}
+.btn.f{background:var(--gold);color:#14141C}
+.btn.f:hover{background:transparent;color:var(--gold-s)}
+@media(max-width:680px){.navlinks{display:none}}
+
+.hero{position:relative;min-height:84vh;display:flex;align-items:center;overflow:hidden}
+.hero .bg{position:absolute;inset:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:brightness(.5) contrast(1.05)}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,20,28,.92),rgba(20,20,28,.5) 60%,rgba(20,20,28,.7))}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-family:"Shippori Mincho",serif;font-weight:500;font-size:clamp(2.2rem,4.6vw,3.8rem);line-height:1.6;letter-spacing:.1em;margin-bottom:1.6rem}
+.hero h1 .g{color:var(--gold-s)}
+.hero p{color:#C8C2B4;max-width:30em;font-size:.98rem;line-height:2.2;margin-bottom:2.6rem}
+.hero .line{width:90px;height:1px;background:var(--gold);margin-bottom:2rem}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+
+.sec{padding:120px 0}
+.sec-head{text-align:center;max-width:42em;margin:0 auto 64px}
+.sec-head h2{font-family:"Shippori Mincho",serif;font-weight:500;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.6;letter-spacing:.08em}
+.sec-head p{margin-top:1rem;color:var(--muted);font-size:.92rem}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;border:1px solid var(--line)}
+.split .im{position:relative;min-height:460px;overflow:hidden}
+.split .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.split .tx{padding:80px clamp(28px,5vw,70px);display:flex;flex-direction:column;justify-content:center;background:var(--panel)}
+.split .tx h2{font-family:"Shippori Mincho",serif;font-weight:500;font-size:1.8rem;line-height:1.7;margin-bottom:1.4rem;letter-spacing:.05em}
+.split .tx p{color:var(--muted);font-size:.92rem;margin-bottom:1rem}
+
+.menu-l{max-width:880px;margin:0 auto;border-top:1px solid var(--line)}
+.mrow{display:grid;grid-template-columns:54px 1fr auto;gap:26px;align-items:center;padding:32px 6px;border-bottom:1px solid var(--line);transition:.4s}
+.mrow:hover{background:var(--panel);padding-left:20px}
+.mrow .no{font-family:"Cormorant Garamond";font-style:italic;font-size:1.5rem;color:var(--gold)}
+.mrow h3{font-family:"Shippori Mincho";font-size:1.2rem;font-weight:500;letter-spacing:.04em}
+.mrow h3 .e{display:block;font-family:"Cormorant Garamond";font-style:italic;font-size:.84rem;color:var(--muted);letter-spacing:.14em;margin-top:3px}
+.mrow .p{font-family:"Shippori Mincho";font-size:1.3rem;color:var(--gold-s);white-space:nowrap}
+@media(max-width:620px){.mrow{grid-template-columns:40px 1fr;gap:6px 14px}.mrow .p{grid-column:2;color:var(--gold-s)}}
+
+.palette{background:var(--panel)}
+.palette .chips{display:flex;justify-content:center;gap:0;max-width:640px;margin:0 auto;border:1px solid var(--gold);padding:6px}
+.palette .chips i{flex:1;height:110px}
+
+.cta{position:relative;text-align:center;padding:130px 0;overflow:hidden}
+.cta .bg{position:absolute;inset:0}
+.cta .bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.34)}
+.cta .wrap{position:relative;z-index:2}
+.cta h2{font-family:"Shippori Mincho",serif;font-weight:500;font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.7;letter-spacing:.1em;margin-bottom:1.4rem}
+.cta h2 .g{color:var(--gold-s)}
+.cta p{color:#C8C2B4;margin-bottom:2.4rem;font-size:.94rem}
+.cta .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+footer{background:#0E0E14;color:var(--muted);padding:46px 0;text-align:center;font-size:.78rem;letter-spacing:.1em;border-top:1px solid var(--line)}
+footer .cm{font-size:1.7rem;letter-spacing:.3em;color:var(--gold-s);display:block;margin-bottom:8px}
+@media(max-width:820px){.split{grid-template-columns:1fr}.split .im{min-height:300px}.sec{padding:80px 0}}
+</style>
+</head>
+<body>
+<div class="demobar">DESIGN DIRECTION <b>⑥ LUXURY / DARK</b> ｜ 濃紺×ゴールド・明朝・重厚で特別感（写真・文章はダミー）</div>
+<header><div class="wrap nav">
+  <a href="#" class="brand">Coloris</a>
+  <nav><ul class="navlinks"><li><a href="#concept">Concept</a></li><li><a href="#menu">Menu</a></li><li><a href="#cta" class="btn">Reservation</a></li></ul></nav>
+</div></header>
+
+<section class="hero">
+  <div class="bg"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1700&q=74&auto=format&fit=crop" alt=""></div>
+  <div class="wrap">
+    <div class="eyebrow">Personal Color Atelier</div>
+    <div class="line"></div>
+    <h1>あなただけの<span class="g">美</span>を、<br>色から導く。</h1>
+    <p>表参道のプライベートアトリエ。一日お一人さまの完全予約制で、あなた史上最高の「似合う」を、最上のおもてなしとともに。</p>
+    <div class="hero-cta"><a href="#cta" class="btn f">ご予約はこちら</a><a href="#menu" class="btn">メニューを見る</a></div>
+  </div>
+</section>
+
+<section class="sec" id="concept" style="padding-bottom:0"><div class="wrap">
+  <div class="split">
+    <div class="im"><img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=1000&q=72&auto=format&fit=crop" alt=""></div>
+    <div class="tx">
+      <div class="eyebrow">Concept</div>
+      <h2>色は、品格を<br>まとうこと。</h2>
+      <p>長年の経験を重ねたトップアナリストが、お一人おひとりと深く向き合います。流行ではなく、あなたという人だけが持つ美しさを、色という言語で引き出します。</p>
+      <p>特別な時間を、ここで。</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec" id="menu"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow c">Menu</div><h2>サロンメニュー</h2><p>すべて完全予約制・税込価格</p></div>
+  <div class="menu-l">
+    <div class="mrow"><div class="no">I</div><h3>パーソナルカラー診断<span class="e">Personal Color</span></h3><div class="p">¥18,000—</div></div>
+    <div class="mrow"><div class="no">II</div><h3>骨格診断<span class="e">Body Type</span></h3><div class="p">¥16,000—</div></div>
+    <div class="mrow"><div class="no">III</div><h3>顔タイプ診断<span class="e">Face Type</span></h3><div class="p">¥16,000—</div></div>
+    <div class="mrow"><div class="no">IV</div><h3>トータルプレミアム診断<span class="e">Total Premium</span></h3><div class="p">¥48,000—</div></div>
+  </div>
+</div></section>
+
+<section class="sec palette"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow c">Your Palette</div><h2>あなたを高める、<br>気品の色。</h2></div>
+  <div class="chips"><i style="background:#7A2E3B"></i><i style="background:#2E4A6E"></i><i style="background:#1F3D38"></i><i style="background:#5A4A2E"></i><i style="background:#3A2E42"></i><i style="background:#C5A253"></i></div>
+</div></section>
+
+<section class="cta" id="cta">
+  <div class="bg"><img src="https://images.unsplash.com/photo-1457972729786-0411a3b2b626?w=1700&q=72&auto=format&fit=crop" alt=""></div>
+  <div class="wrap">
+    <div class="eyebrow c">Reservation</div>
+    <h2>特別な<span class="g">一日</span>を、<br>ご予約ください。</h2>
+    <p>ご予約・ご相談は、LINE・予約フォーム・Instagram より承っております。</p>
+    <div class="btns"><a href="#" class="btn f">ご予約・お問い合わせ</a><a href="#" class="btn">メニューを見る</a></div>
+  </div>
+</section>
+<footer><span class="cm">Coloris</span>© 2026 Coloris — Luxury Demo</footer>
+</body>
+</html>
+</script>
+<script>
+var view=document.getElementById('view');
+function show(n){
+  view.srcdoc=document.getElementById('t'+n).textContent;
+  var tabs=document.querySelectorAll('.tab');
+  for(var i=0;i<tabs.length;i++){tabs[i].classList.toggle('active',tabs[i].getAttribute('data-t')==n);}
+}
+var tabs=document.querySelectorAll('.tab');
+for(var i=0;i<tabs.length;i++){tabs[i].addEventListener('click',function(){show(this.getAttribute('data-t'));});}
+show(1);
+</script>
+</body>
+</html>
