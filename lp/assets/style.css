@@ -193,6 +193,20 @@ h3 { font-size: 1.15rem; }
 .featured .button-primary { color: var(--plum); background: #fff; box-shadow: none; }
 .menu-note { margin-top: 32px; color: var(--muted); font-size: .76rem; text-align: center; }
 
+/* ===== VOICE ===== */
+.voice-section { background: var(--paper); }
+.voice-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 58px; }
+.voice-card { display: flex; flex-direction: column; padding: 36px 32px 32px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-soft); }
+.voice-stars { margin-bottom: 18px; color: #d4a843; font-size: 1.05rem; letter-spacing: 3px; }
+.voice-card blockquote { flex: 1; margin: 0 0 28px; padding: 0; }
+.voice-card blockquote p { margin: 0; color: var(--muted); font-size: .88rem; line-height: 2; font-style: italic; }
+.voice-author { display: flex; align-items: center; gap: 16px; padding-top: 22px; border-top: 1px solid var(--line); }
+.voice-author img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.voice-author div { display: flex; flex-direction: column; gap: 3px; }
+.voice-author strong { font-size: .9rem; font-family: var(--font-mincho); }
+.voice-author span { color: var(--muted); font-size: .72rem; }
+.demo-label { display: inline-block; margin-top: 8px; padding: 3px 10px; background: rgba(108,41,78,.08); border-radius: 99px; color: var(--plum); font-size: .72rem; font-style: normal; }
+
 .flow-section { position: relative; overflow: hidden; }
 .flow-grid { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 64px; }
 .flow-step { position: relative; padding: 0 30px; border-right: 1px solid var(--line); }
@@ -312,6 +326,7 @@ h3 { font-size: 1.15rem; }
   .flow-step:nth-child(2) { border-right: 0; }.flow-step:nth-child(3) { padding-left: 0; }
   .profile-photo { max-width: 510px; margin: 0 auto; }
   .profile-copy { max-width: 670px; }
+  .voice-grid { grid-template-columns: 1fr; max-width: 560px; }
   .faq-layout { grid-template-columns: 1fr; gap: 45px; }
   .faq-heading { position: static; }
   .footer-grid { grid-template-columns: 1fr 1fr; }.footer-grid > div:first-child { grid-column: 1 / -1; }
@@ -364,6 +379,8 @@ h3 { font-size: 1.15rem; }
   .profile-grid { gap: 55px; }
   .profile-photo { max-width: 360px; }
   .profile-copy h2 { font-size: 2.1rem; }
+  .voice-grid { max-width: 100%; }
+  .voice-card { padding: 28px 22px 24px; }
   .scene-grid { grid-template-columns: 1fr; gap: 18px; }
   .scene-card, .scene-card img { min-height: 390px; }
   .faq-list summary { padding-block: 23px; font-size: .9rem; }
